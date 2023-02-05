@@ -39,19 +39,15 @@ class App extends router(LitElement) {
   }
 
   render() {
+    // TO DO: If we want to have different pages, I also did  the setup
+    // for navigator; I won't delete that in case it's need in the future
     return html`
       <router-outlet active-route=${this.route}>
         <login-page route="login"></login-page>
+        <user-details route="user-details"></user-details>
       </router-outlet>
     `;
   }
-
-  // render() {
-  //   return html`
-  //     <h1>Dece</h1>
-  //     <login></login>
-  //   `
-  // }
 }
 
 customElements.define('my-app', App);
