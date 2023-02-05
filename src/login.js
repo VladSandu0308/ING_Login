@@ -1,6 +1,5 @@
 import { LitElement, css, html } from "lit";
 import { LionButton, LionButtonReset, LionButtonSubmit } from '@lion/ui/button.js';
-import { LionInputEmail } from '@lion/ui/input-email.js';
 import { LionInput } from '@lion/ui/input.js';
 import { navigator } from "lit-element-router";
 
@@ -28,28 +27,6 @@ class MyButton extends LionButton {
     }
 
     
-}
-
-class MyEmailInput extends LionInputEmail {
-    constructor() {
-        super();
-        this.defaultValidators.pop();
-    }
-
-    static get styles() {
-      return [
-        super.styles,
-        css`
-          /* your styles here */
-          
-          :host {
-            width: autO;
-            margin-bottom: -0px;
-            padding: 15px;
-          }
-        `,
-      ];
-    }
 }
 
 class MyInput extends LionInput {
